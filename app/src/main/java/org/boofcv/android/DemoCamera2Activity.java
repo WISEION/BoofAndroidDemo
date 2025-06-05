@@ -13,6 +13,7 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.Typeface;
+import android.graphics.Bitmap;
 import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CameraDevice;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ import android.os.Looper;
 import android.util.Log;
 import android.util.Size;
 import android.view.MotionEvent;
+import android.view.View;
 import android.view.SurfaceView;
 import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
@@ -31,6 +33,8 @@ import androidx.annotation.Nullable;
 import org.acra.ACRA;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Locale;
 
 import boofcv.android.ConvertBitmap;
@@ -607,6 +611,27 @@ public abstract class DemoCamera2Activity extends VisualizeCamera2Activity {
      */
     protected void toast(String message) {
         runOnUiThread(() -> Toast.makeText(this,message,Toast.LENGTH_LONG).show());
+    }
+
+    public void onSnapshotClicked(View view) { takeSnapshot(); }
+
+    /** Saves the current camera frame to disk */
+    protected void takeSnapshot() {
+        File dir = new File(getExternalDirectory(this), "snapshots");
+        if (!dir.exists() && !dir.mkdirs()) {
+            Log.e(TAG, "Failed to create snapshot directory" );
+            toast("Unable to create directory");
+            return;
+        }
+        String name = "snapshot_"+System.currentTimeMillis()+".png";
+        File file = new File(dir, name);
+        try {
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, new FileOutputStream(file));
+            toast("Saved "+name);
+        } catch (IOException e) {
+            e.printStackTrace();
+            toast("Failed to save snapshot");
+        }
     }
 
     public boolean isCameraCalibrated() {
