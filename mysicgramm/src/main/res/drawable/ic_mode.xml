@@ -1,0 +1,11 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Bar-chart glyph representing histogram modes -->
+    <path android:fillColor="@android:color/white" android:pathData="M4,13h3v7h-3z" />
+    <path android:fillColor="@android:color/white" android:pathData="M9,8h3v12h-3z" />
+    <path android:fillColor="@android:color/white" android:pathData="M14,4h3v16h-3z" />
+    <path android:fillColor="@android:color/white" android:pathData="M19,10h1.5v10h-1.5z" />
+</vector>

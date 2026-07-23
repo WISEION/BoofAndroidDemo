@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mysicgramm</string>
+
+    <string name="mode_global">Global histogram</string>
+    <string name="mode_local">Local histogram</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="radius_label">Local radius</string>
+    <string name="bins_label">Histogram bins</string>
+    <string name="downscale_label">Processing downscale</string>
+    <string name="color_label">Color processing</string>
+    <string name="info_label">On-screen info</string>
+    <string name="overlay_label">Live histogram overlay</string>
+    <string name="close">Close</string>
+
+    <string name="cd_mode">Toggle histogram mode</string>
+    <string name="cd_settings">Open settings</string>
+    <string name="cd_shutter">Capture (tap = photo, hold = video)</string>
+</resources>
