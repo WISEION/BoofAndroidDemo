@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        applicationId "org.boofcv.mysicgramm"
+        // Camera2 API needs to be functional
+        minSdkVersion 22
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            debuggable true
+        }
+        // Turns off debugging so image processing runs at full speed
+        fast {
+            initWith buildTypes.debug
+            debuggable false
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude("META-INF/*.kotlin_module")
+    }
+}
+
+// These conflict with Android provided libraries
+configurations {
+    all*.exclude group: "xmlpull", module: "xmlpull"
+    all*.exclude group: "org.apache.commons", module: "commons-compress"
+}
+
+dependencies {
+    ['boofcv-android', 'boofcv-core'].each {
+        String a -> implementation group: 'org.boofcv', name: a, version: '0.41'
+    }
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+}
