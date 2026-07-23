@@ -1,15 +1,15 @@
-name: Build Mysicgramm APK
+name: Build Boof Mystic CV APK
 
 on:
   push:
     branches:
       - "claude/**"
     paths:
-      - "mysicgramm/**"
+      - "boof_mystic_cv/**"
       - "settings.gradle"
       - "build.gradle"
       - "gradle/**"
-      - ".github/workflows/mysicgramm-build.yml"
+      - ".github/workflows/boof_mystic_cv-build.yml"
   workflow_dispatch:
 
 jobs:
@@ -29,12 +29,12 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build debug APK
-        run: ./gradlew :mysicgramm:assembleDebug --stacktrace
+        run: ./gradlew :boof_mystic_cv:assembleDebug --stacktrace
 
       - name: Upload APK
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: mysicgramm-debug-apk
-          path: mysicgramm/build/outputs/apk/debug/*.apk
+          name: boof_mystic_cv-debug-apk
+          path: boof_mystic_cv/build/outputs/apk/debug/*.apk
           if-no-files-found: error

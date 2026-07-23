@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Mysicgramm</string>
+    <string name="app_name">Boof Mystic CV</string>
 
     <string name="mode_global">Global histogram</string>
     <string name="mode_local">Local histogram</string>

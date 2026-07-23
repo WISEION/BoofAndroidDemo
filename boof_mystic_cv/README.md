@@ -1,7 +1,7 @@
-# Mysicgramm
+# Boof Mystic CV
 
 A focused camera app that shows **live histogram enhancement** using BoofCV. It is a separate,
-minimal Gradle module (`:mysicgramm`) built directly on BoofCV's `VisualizeCamera2Activity` — the
+minimal Gradle module (`:boof_mystic_cv`) built directly on BoofCV's `VisualizeCamera2Activity` — the
 clean example base class rather than the heavier demo infrastructure in `:app`.
 
 ## Features
@@ -27,7 +27,7 @@ Gestures use view coordinates, so they behave the same in portrait or landscape.
 * **Press & hold** → record video; release to stop.
 * Each capture is saved in **both** the enhanced and raw versions.
 
-Photos go to `Pictures/Mysicgramm` (via `MediaStore` on Android 10+, public storage on older
+Photos go to `Pictures/Boof Mystic CV` (via `MediaStore` on Android 10+, public storage on older
 versions). Videos are recorded with `MediaCodec`/`MediaMuxer` and registered with the gallery.
 
 ### Settings (gear button, top-right)
@@ -40,7 +40,7 @@ versions). Videos are recorded with `MediaCodec`/`MediaMuxer` and registered wit
 
 ## Building
 
-Open the repository in Android Studio and select the **mysicgramm** run configuration. The module
+Open the repository in Android Studio and select the **boof_mystic_cv** run configuration. The module
 pulls `org.boofcv:boofcv-android` and `boofcv-core` (0.41) from Maven Central, same as `:app`.
 
 Build variants mirror the demo: `debug` (breakpoints, slow), `fast` (full speed), `release`.

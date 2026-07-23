@@ -4,7 +4,7 @@ android {
     compileSdkVersion 33
 
     defaultConfig {
-        applicationId "org.boofcv.mysicgramm"
+        applicationId "org.boofcv.boof_mystic_cv"
         // Camera2 API needs to be functional
         minSdkVersion 22
         targetSdkVersion 33

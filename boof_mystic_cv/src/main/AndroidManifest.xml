@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.boofcv.mysicgramm">
+    package="org.boofcv.boof_mystic_cv">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <!-- Only needed for saving to shared storage on API < 29 -->
@@ -18,7 +18,7 @@
         android:label="@string/app_name"
         android:largeHeap="true"
         android:hardwareAccelerated="true"
-        android:theme="@style/Theme.Mysicgramm">
+        android:theme="@style/Theme.BoofMysticCV">
 
         <activity
             android:name=".HistogramCameraActivity"

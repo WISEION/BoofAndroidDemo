@@ -1,4 +1,4 @@
-package org.boofcv.mysicgramm;
+package org.boofcv.boof_mystic_cv;
 
 import android.graphics.Bitmap;
 import android.media.Image;

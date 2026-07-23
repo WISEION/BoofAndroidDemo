@@ -1,6 +1,6 @@
 > **A note from this fork's maintainer:** This project changed my life. See **[GALLERY.md](GALLERY.md)**
 > for a personal thank-you to the author, Peter Abeles, and some of the skies this app revealed to me.
-> A small histogram-focused spin-off I built lives in [`mysicgramm/`](mysicgramm/).
+> A small histogram-focused spin-off I built lives in [`boof_mystic_cv/`](boof_mystic_cv/).
 
 Demonstration of BoofCV for Android devices.  BoofCV is an open source Java computer vision library.  The source code for this application is made freely available without restriction.  BoofCV has been released under an Apache 2.0 license.
 

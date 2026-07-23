@@ -1,4 +1,4 @@
-package org.boofcv.mysicgramm;
+package org.boofcv.boof_mystic_cv;
 
 import android.content.ContentResolver;
 import android.content.ContentValues;
@@ -23,7 +23,7 @@ import java.io.OutputStream;
  */
 public class MediaSaver {
 
-    public static final String ALBUM = "Mysicgramm";
+    public static final String ALBUM = "BoofMysticCV";
 
     /** Directory used for video files (also used as a legacy fallback for photos). */
     public static File albumDir(Context context, String type) {

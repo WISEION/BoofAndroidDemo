@@ -1,4 +1,4 @@
-package org.boofcv.mysicgramm;
+package org.boofcv.boof_mystic_cv;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -51,7 +51,7 @@ import org.ddogleg.struct.DogArray_I8;
 import pabeles.concurrency.GrowArray;
 
 /**
- * Mysicgramm — a focused camera app that shows live histogram enhancement using BoofCV.
+ * Boof Mystic CV — a focused camera app that shows live histogram enhancement using BoofCV.
  *
  * <p>Two enhancement modes are offered, toggled by a single button:</p>
  * <ul>
@@ -568,8 +568,8 @@ public class HistogramCameraActivity extends VisualizeCamera2Activity {
         final Bitmap raw = toBitmap(input);
         final String stamp = timestamp();
         io.execute(() -> {
-            String loc = MediaSaver.savePhoto(this, enh, "MYSIC_" + stamp + "_enhanced");
-            MediaSaver.savePhoto(this, raw, "MYSIC_" + stamp + "_raw");
+            String loc = MediaSaver.savePhoto(this, enh, "BMCV_" + stamp + "_enhanced");
+            MediaSaver.savePhoto(this, raw, "BMCV_" + stamp + "_raw");
             final String where = loc != null ? loc : "gallery";
             runOnUiThread(() -> toast("Saved photo (enhanced + raw) → " + where));
             enh.recycle();
@@ -590,8 +590,8 @@ public class HistogramCameraActivity extends VisualizeCamera2Activity {
         int h = bitmap.getHeight();
         String stamp = timestamp();
         try {
-            File fEnh = MediaSaver.newVideoFile(this, "MYSIC_" + stamp + "_enhanced");
-            File fRaw = MediaSaver.newVideoFile(this, "MYSIC_" + stamp + "_raw");
+            File fEnh = MediaSaver.newVideoFile(this, "BMCV_" + stamp + "_enhanced");
+            File fRaw = MediaSaver.newVideoFile(this, "BMCV_" + stamp + "_raw");
             recEnhanced = new VideoRecorder(fEnh, w, h, 30);
             recRaw = new VideoRecorder(fRaw, w, h, 30);
             recEnhanced.start();

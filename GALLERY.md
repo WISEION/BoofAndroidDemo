@@ -14,8 +14,8 @@ in life again. This app helped me more than I can easily put into words.
 So, Peter — **thank you**. Truly. Your work reached someone you never met, on the other side of
 the world, and helped him through one of the hardest times of his life.
 
-I also tried to build my own small version of the app — **Mysicgramm** (in the
-[`mysicgramm/`](mysicgramm/) folder of this repo) — focused on just the two histogram modes that
+I also tried to build my own small version of the app — **Boof Mystic CV** (in the
+[`boof_mystic_cv/`](boof_mystic_cv/) folder of this repo) — focused on just the two histogram modes that
 meant the most to me, with a more "mystic" feeling to it. I'm sorry if my attempt isn't very
 good; it comes from a place of gratitude, not skill.
 
